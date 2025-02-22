@@ -14,7 +14,7 @@ const AddProduct = () => {
 
   const fetchProducts = async () => {
     try {
-      const response = await axios.get("http://localhost:5000/api/products");
+      const response = await axios.get("https://ecommerence-backend-m674.onrender.com/api/products");
       setProducts(response.data);
     } catch (error) {
       console.error("Error fetching products:", error);
@@ -32,7 +32,7 @@ const AddProduct = () => {
     formData.append("file", excelFile);
 
     try {
-      await axios.post("http://localhost:5000/api/products/upload-excel", formData, {
+      await axios.post("https://ecommerence-backend-m674.onrender.com/api/products/upload-excel", formData, {
         headers: { "Content-Type": "multipart/form-data" },
       });
       alert("Products uploaded successfully!");
@@ -46,7 +46,7 @@ const AddProduct = () => {
   //  Delete Single Product
   const deleteProduct = async (productId) => {
     try {
-      await axios.delete(`http://localhost:5000/api/products/${productId}`);
+      await axios.delete(`https://ecommerence-backend-m674.onrender.com/api/products/${productId}`);
       alert("Product deleted successfully!");
       fetchProducts();
     } catch (error) {
@@ -60,7 +60,7 @@ const AddProduct = () => {
     if (!window.confirm("Are you sure you want to delete all products?")) return;
     
     try {
-      await axios.delete("http://localhost:5000/api/products");
+      await axios.delete("https://ecommerence-backend-m674.onrender.com/api/products");
       alert("All products deleted successfully!");
       fetchProducts();
     } catch (error) {
