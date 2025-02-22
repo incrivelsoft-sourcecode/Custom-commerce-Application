@@ -13,7 +13,7 @@ const ForgotPassword = () => {
     setError("");
 
     try {
-      const response = await axios.post("http://localhost:5000/api/users/forgot-password", { email });
+      const response = await axios.post("https://ecommerence-backend-m674.onrender.com/api/users/forgot-password", { email });
       setMessage(response.data.message);
     } catch (error) {
       setError(error.response?.data?.message || "Failed to process request.");
