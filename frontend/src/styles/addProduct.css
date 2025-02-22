@@ -1,0 +1,135 @@
+/* General Styling */
+.add-product-container {
+  width: 90%;
+  max-width: 1200px;
+  margin: 20px auto;
+  padding: 20px;
+  background-color: #fff;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+}
+
+/* Back Button */
+.back-btn {
+  display: inline-block;
+  margin-bottom: 15px;
+  padding: 8px 12px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: background 0.3s ease-in-out;
+}
+
+.back-btn:hover {
+  background-color: #0056b3;
+}
+
+/* Buttons Container */
+.buttons-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+/* Excel Upload Form */
+.excel-upload-form {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.excel-upload-form input {
+  padding: 6px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.excel-upload-form button,
+.delete-all-btn,
+.delete-btn {
+  background-color: #28a745;
+  color: white;
+  border: none;
+  padding: 8px 12px;
+  cursor: pointer;
+  border-radius: 5px;
+  transition: background 0.3s ease-in-out;
+}
+
+/* Delete All Button */
+.delete-all-btn {
+  background-color: #dc3545;
+}
+
+.delete-all-btn:hover {
+  background-color: #c82333;
+}
+
+/* Delete Button */
+.delete-btn {
+  background-color: #ff5c5c;
+}
+
+.delete-btn:hover {
+  background-color: #e60000;
+}
+
+/* Product Table */
+.product-table {
+  width: 100%;
+  overflow-x: auto;
+}
+
+.product-table h2 {
+  margin-bottom: 15px;
+  text-align: center;
+  font-size: 22px;
+  color: #333;
+}
+
+.product-table table {
+  width: 100%;
+  border-collapse: collapse;
+  background-color: white;
+}
+
+.product-table th,
+.product-table td {
+  border: 1px solid #ddd;
+  padding: 10px;
+  text-align: left;
+}
+
+.product-table th {
+  background-color: #f4f4f4;
+  font-weight: bold;
+}
+
+/* Product Image */
+.product-image {
+  width: 50px;
+  height: 50px;
+  object-fit: cover;
+  border-radius: 5px;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .buttons-container {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .product-table table {
+    font-size: 14px;
+  }
+
+  .product-table th,
+  .product-table td {
+    padding: 8px;
+  }
+}
