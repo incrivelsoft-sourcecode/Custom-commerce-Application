@@ -16,7 +16,7 @@ const ResetPassword = () => {
     setError("");
 
     try {
-      const response = await axios.post("http://localhost:5000/api/users/reset-password", { token, newPassword });
+      const response = await axios.post("https://ecommerence-backend-m674.onrender.com/api/users/reset-password", { token, newPassword });
       setMessage(response.data.message);
       setTimeout(() => navigate("/login"), 3000); // Redirect after success
     } catch (error) {
